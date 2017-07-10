@@ -1,0 +1,268 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #ddd;
+}
+body{
+   background: url(./img/background3.jpg) no-repeat center;
+   background-size: cover;
+   overflow-x: hidden;
+}
+header{
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+  text-align: center;
+}
+header h1,h3{
+  margin: 10px auto;
+}
+nav li{
+  display: inline-block;
+  margin: 20px 20px;;
+}
+nav li:hover{
+  color: #fff;
+}
+.dropLi{
+  position: relative;
+}
+
+.dropMenu{
+  position: absolute;
+  left: -35px;
+  background: #444;
+}
+.selected{
+  color: #fff;
+}
+.logoWrapper{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.logo{
+  margin: 0 20px;
+}
+.r-logo{
+  animation: rotate 8s linear infinite;
+}
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.logo.bounce{
+  animation: bounce .4s linear;
+}
+@keyframes bounce{
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.board{
+  min-height: 700px;
+  width: 90%;
+  text-align: center;
+  font-size: 2em;
+  margin: 50px auto;
+  color: #ddd;
+}
+.board p{
+  margin-bottom: 80px;
+  color: #ddd;
+}
+.codepen{
+  color: cyan;
+}
+.codepen:hover{
+  color: skyblue;
+}
+.content{
+  background: url('./img/folder.png') no-repeat top center;
+  background-size: cover;
+  position: relative;
+  float: left;
+  margin: 35px;
+  padding: 20px;
+  width: 256px;
+  height: 256px;
+}
+.content p{
+  font-size: 1em;
+  text-align: right;
+  position: absolute;
+  top: 25px;
+  left: 163px;
+  color: #ddd;
+}
+.content img{
+  position: absolute;
+  margin: auto;
+  top: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 400ms ease-in;
+  color: #000;
+}
+.modal-content{
+  width: 50%;
+  height: 90%;
+  margin: 30px auto;
+  transition: all 400ms ease-in;
+  border-radius: 5px;
+  background: linear-gradient(#fff, #999);;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.modal-content img{
+  float: left;
+  margin: 20px;
+}
+.close{
+  float: right;
+  background: #666;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.modal-content p{
+  margin-top: 20px;
+  clear: both;
+  color: #333;
+}
+.modal-content h3{
+  margin-top: 20px;
+  color: #333;
+}
+.modal-content button{
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+  cursor: pointer;
+  color: #333;
+}
+
+footer{
+  width: 100%;
+  background: #444;
+  height: 80px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px;
+  clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+  .modal-content{
+     width: 100%;
+     height: 100%;
+     margin: 0 auto;
+     transition: all 400ms ease-in;
+     border-radius: 5px;
+     background: linear-gradient(#fff, #999);;
+   	background: -moz-linear-gradient(#fff, #999);
+   	background: -webkit-linear-gradient(#fff, #999);
+   	background: -o-linear-gradient(#fff, #999);
+  }
+  .modal-content img{
+     display: block;
+     margin: 20px auto;
+     width: 80%;
+     height: 30%
+  }
+  .close{
+    float: right;
+    background: #666;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .modal-content p{
+    margin-top: 20px;
+    clear: both;
+    color: #333;
+  }
+  .modal-content h3{
+    clear: both;
+    margin-top: 20px;
+    color: #333;
+  }
+  .modal-content button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888;
+    cursor: pointer;
+    color: #333;
+    margin-top: -20px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px){
+  .modal-content img{
+     display: block;
+     margin: 20px auto;
+     width: 50%;
+     height: 30%
+  }
+}
+@media screen and (max-width: 300px) {
+  body{
+    overflow-x: hidden;
+  }
+  header h3{
+    margin-bottom: 30px;
+  }
+  nav{
+    float: left;
+  }
+  nav li{
+    margin: 10px;
+    display: block;
+  }
+ .board{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+ }
+.content{
+    width: 100%;
+    margin: 0;
+ }
+}

@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #ddd;
+}
+body{
+  background: url(./img/background.png) center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+header{
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+}
+header h1,h3{
+  text-align: center;
+  margin: 10px;
+}
+nav{
+  text-align: center;
+}
+nav li{
+  display: inline-block;
+  margin: 20px 20px;
+}
+nav li:hover{
+  color: #fff;
+}
+.dropLi{
+  position: relative;
+}
+.dropMenu{
+  position: absolute;
+  left: -35px;
+  background: #444;
+}
+.selected{
+  color: #fff;
+}
+.fly-text{
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  margin: 40px 0;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 250px;
+  color: #fff;
+  transform: translateX(-50%) translateY(-50%)
+}
+.fly-text li{
+  display: inline-block;
+  font-family: Open Sans, serif;
+  font-weight: 300;
+  font-size: 5em;
+  margin-right: 50px;
+  opacity: 1;
+  -webkit-transition: all 3.5s ease;
+  -o-transition: all 3.5s ease;
+  -moz-transition: all 3.5s ease;
+  -ms-transition: all 3.5s ease;
+  transition: all 3.5s ease;
+}
+.fly-text li:last-child{
+  margin-right: 0;
+}
+.fly-text.hidden li{
+  opacity: 0;
+}
+.fly-text.hidden li:nth-child(1){transform: translateX(-200px) translateY(-200px)}
+.fly-text.hidden li:nth-child(2){transform: translateX(-150px) translateY(100px)}
+.fly-text.hidden li:nth-child(3){transform: translateX(-200px) translateY(-50px)}
+.fly-text.hidden li:nth-child(4){transform: translateX(20px) translateY(-100px)}
+.fly-text.hidden li:nth-child(5){transform: translateX(200px) translateY(-200px)}
+.fly-text.hidden li:nth-child(6){transform: translateX(100px) translateY(100px)}
+.fly-text.hidden li:nth-child(7){transform: translateX(200px) translateY(-200px)}
+
+.paragraph{
+  width: 80%;
+  min-height: 300px;
+  font-size: 2em;
+  margin: 200px auto;
+  padding-bottom: 60px;
+  text-align: center;
+  -o-transition: all 4.5s ease;
+  -moz-transition: all 4.5s ease;
+  -ms-transition: all 4.5s ease;
+  -webkit-transition: all 4.5s ease;
+  transition: all 4.5s ease;
+}
+.paragraph.hidden{
+  opacity: 0;
+}
+footer{
+  width: 100%;
+  background: #444;
+  height: 80px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px;
+}
+@media screen and (max-width: 800px) {
+  .fly-text li{
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  body{
+    overflow-x: hidden;
+  }
+  header h3{
+    margin-bottom: 30px;
+  }
+  nav{
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  nav li{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: block;
+    width: 100px;
+  }
+  .dropMenu{
+    position: absolute;
+    left: -15px;
+    background: #444;
+  }
+.fly-text li{
+  display: none;
+}
+  .paragraph{
+    width: 80%;
+    font-size: 1em;
+    margin-top: 100px;
+    text-align: center;
+    clear: both;
+  }
+}

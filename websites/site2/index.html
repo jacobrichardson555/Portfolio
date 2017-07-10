@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temlate</title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+   video{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        object-fit: contain;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -99;
+      }
+      nav{
+        text-align: center;
+        margin-top: 20px;
+      }
+      nav li{
+        display: inline-block;
+        color: #fff;
+        margin: 0 40px;
+        font-size: 18pt;
+        cursor: pointer;
+      }
+      .hometext, .abouttext{
+        margin: 0 auto;
+        width: 70%;
+      }
+      .text{
+        color: #fff;
+        text-align: center;
+        animation: fadeIn 3s ease-in;
+      }
+      .text h1{
+        margin-top: 50px;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+        font-size: 40pt;
+        font-weight: 100;
+        text-align: center;
+      }
+      .text h1, h3{
+        letter-spacing: 10px;
+        animation: change 3s ease 3s infinite;
+      }
+      .c-left{
+        display: inline-block;
+        margin-left: 100px;
+        float: left;
+        width: 40%;
+        text-align: center;
+      }
+      .c-left h3{
+        margin-bottom: 50px;
+      }
+      .c-right{
+        display: inline-block;
+        float: right;
+        width: 40%;
+        margin-right: 100px;
+      }
+      form{
+          margin: 0 auto;
+      }
+      textarea{
+        width: 300px;
+      }
+      input{
+        display: block;
+        margin: 20px auto;
+        width: 300px;
+      }
+      footer{
+        color: #fff;
+        text-align: center;
+        margin-top: 300px;
+        animation: change 3s ease 3s infinite;
+      }
+      .home-footer{
+        margin-top: 430px;
+      }
+      @keyframes fadeIn{
+        from{opacity: 0.3; text-shadow: 0px 0px 80px #fff; color: transparent}
+        to{opacity: 1; text-shadow: 0px 0px 20px #fff;; color: #fff; z-index: 1;}
+      }
+      @keyframes change{
+        0%, 100% {color: #fff; text-shadow: 0px 0px 20px #fff;}
+        50% {color: #aaa; text-shadow: 0px 0px 20px #aaa;}
+      }
+      @media screen and (max-width: 1000px){
+        html{
+          min-height: 1000px;
+        }
+        .contacttext{
+          width: 100%;
+        }
+        .c-left{
+          display: block;
+          width: 70%;
+          float: none;
+          text-align: center;
+          margin: 50px auto;
+        }
+        .c-right{
+          width: 100%;
+          display: block;
+          float: none;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 800px){
+          video{
+            display: none;
+          }
+          html{
+            background: url(poster.png) no-repeat center center;
+            background-size: cover;
+          }
+          .text{
+            min-height: 800px;
+          }
+      }
+      @media screen and (max-width: 500px){
+        nav li{
+          font-size: 1em;
+          margin: 0 20px;
+        }
+        .text h1{
+          font-size: 28px;
+          margin-bottom: 50px;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <video poster='poster.png' autoplay='true' loop='loop' muted>
+        <source src="test.mp4" type="video/mp4">
+        Video is not supported
+      </video>
+    </div>
+    <nav>
+      <ul>
+        <li class='home list'>Home</li>
+        <li class='about list'>About</li>
+        <li class='contact list'>Contact</li>
+      </ul>
+    </nav>
+    <div class="hometext text active">
+      <h1>Welcome</h1><br><br>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat.</h3>
+      <footer class='home-footer'>
+        <p>&copy Jacob Richardson 2017</p>
+        <a href="https://www.facebook.com/jacob.richardson.399?pnref=about.overview.rel"><img src="../../img/facebook-logo.png" alt="facebook logo" width="60"/></a>
+      </footer>
+    </div>
+    <div class="abouttext text">
+      <h1>About</h1><br><br>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat. Sed vehicula imperdiet metus, ut varius massa efficitur at. Curabitur nibh lectus, bibendum ultrices pellentesque quis, pellentesque sed sem. Donec et quam volutpat, auctor ipsum ut, ullamcorper nisl. Praesent euismod nisi eget lectus eleifend, sit amet interdum orci commodo. Mauris a purus nisl. Maecenas at pharetra lectus. Aenean magna purus, luctus et velit ac, vestibulum aliquet augue.</h3>
+      <footer>
+        <p>&copy Jacob Richardson 2017</p>
+        <a href="https://www.facebook.com/jacob.richardson.399?pnref=about.overview.rel"><img src="../../img/facebook-logo.png" alt="facebook logo" width="60"/></a>
+      </footer>
+    </div>
+    <div class="contacttext text">
+      <div>
+        <h1>Contact</h1><br><br>
+      </div>
+      <div class="c-left">
+        <h3>Contact text</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat. Sed vehicula imperdiet metus, ut varius massa efficitur at. Curabitur nibh lectus, bibendum ultrices pellentesque quis, pellentesque sed sem. Donec et quam volutpat, auctor ipsum ut, ullamcorper nisl. Praesent euismod nisi eget lectus eleifend, sit amet interdum orci commodo. Mauris a purus nisl.</p>
+      </div>
+      <div class="c-right">
+        <form class="contactForm" action="index.html" method="post">
+          <input type="text" name="name" placeholder="name">
+          <input type="text" name="name" placeholder="email">
+          <textarea name="message" rows="8" cols="80" placeholder="message"></textarea>
+        </form>
+      </div>
+      <footer>
+        <p>&copy Jacob Richardson 2017</p>
+        <a href="https://www.facebook.com/jacob.richardson.399?pnref=about.overview.rel"><img src="../../img/facebook-logo.png" alt="facebook logo" width="60"/></a>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript'>
+      $(".abouttext").hide();
+      $(".contacttext").hide();
+      $(document).ready(function(){
+
+        $('.home').click(function(){
+          $('.active').fadeOut('slow').removeClass('active');
+          setTimeout(function(){
+          $('.hometext').fadeIn('fast').addClass('active');
+          },1000)
+        })
+
+        $('.about').click(function(){
+          $('.active').fadeOut('slow').removeClass('active');
+          setTimeout(function(){
+          $('.abouttext').fadeIn('fast').addClass('active');
+          },1000)
+        })
+
+        $('.contact').click(function(){
+          $('.active').fadeOut('fast').removeClass('active');
+          setTimeout(function(){
+            $('.contacttext').fadeIn('fast').addClass('active');
+          },1000)
+
+        })
+      })
+    </script>
+  </body>
+</html>

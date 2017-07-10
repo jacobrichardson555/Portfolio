@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/936902_4890546624748_96868433_n.jpg?oh=a1a3e2722f0ad17db7081d28bdc95960&oe=59B23B1E");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/31494_1281712688210_2663880_n.jpg?oh=db53e3bacdd06883962bc896eb8c3dc2&oe=5974CAA2");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/13241191_10206598507504630_6857825160927841582_n.jpg?oh=0cf461096014bcfd66e95f3191fb63d9&oe=59869C9B");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+p{
+  text-align: center;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<title>Parallax Webpage</title>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">WELCOME</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Parallax Webpage</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat. Sed vehicula imperdiet metus, ut varius massa efficitur at. Curabitur nibh lectus, bibendum ultrices pellentesque quis, pellentesque sed sem. Donec et quam volutpat, auctor ipsum ut, ullamcorper nisl. Praesent euismod nisi eget lectus eleifend, sit amet interdum orci commodo. Mauris a purus nisl. Maecenas at pharetra lectus. </p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">Contact</span>
+  </div>
+</div>
+
+</body>
+</html>

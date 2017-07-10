@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body{
+  background: url(https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/970036_4890555264964_229519316_n.jpg?oh=8eb402ad3074ffadc9cb14988cd6371a&oe=5983F398) no-repeat top center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+header{
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+  color: #000;
+}
+header h1,h3{
+  text-align: center;
+  margin: 10px;
+}
+nav{
+  text-align: center;
+}
+nav li{
+  display: inline-block;
+  margin: 20px 20px;
+}
+nav li:hover{
+  color: #fff;
+}
+nav a{
+    color: #000;
+}
+.dropLi{
+  position: relative;
+}
+
+.dropMenu{
+  position: absolute;
+  left: -35px;
+  background: #444;
+}
+.selected{
+  color: #fff;
+}
+.wrapper{
+  width: 100%;
+  min-height: 500px;
+}
+.text{
+  width: 45%;
+  text-align: center;
+  display: inline-block;
+  margin-left: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ddd;
+}
+.text p{
+  color: #ddd;
+}
+.pic{
+  width: 45%;
+  text-align: center;
+  display: inline-block;
+  float: right;
+}
+footer{
+  width: 100%;
+  background: #444;
+  height: 80px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px;
+  clear: both;
+}
+@media screen and (max-width: 1200px) {
+  html{
+    background: #333;
+    overflow-x: hidden;
+  }
+  header h3{
+    margin-bottom: 30px;
+  }
+  nav{
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  nav li{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: block;
+    width: 100px;
+  }
+  .dropMenu{
+    position: absolute;
+    left: -15px;
+    background: #444;
+  }
+  .text{
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+  .pic{
+    display:block;
+    width: 100%;
+    text-align: center;
+  }
+  .wrapper{
+    height: 300px;
+    width: 100%;
+  }
+}

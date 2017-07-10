@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body{
+  background: url(./img/background2.jpg) no-repeat top center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+header{
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+}
+header h1,h3{
+  text-align: center;
+  margin:  10px auto;
+}
+nav{
+  text-align: center;
+  width: 100%;
+}
+nav li{
+  display: inline-block;
+  margin: 20px 20px;
+  color: #000;
+}
+nav li:hover{
+  color: #fff;
+}
+nav a{
+  color: #000;
+}
+.dropLi{
+  position: relative;
+}
+
+.dropMenu{
+  position: absolute;
+  left: -35px;
+  background: #444;
+}
+.selected{
+  color: #fff;
+}
+.mainWrapper{
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+}
+.formWrapper{
+  text-align: right;
+  width: 45%;
+  margin-right: 100px;
+  display:inline-block;
+  float: right;
+}
+input{
+  height: 30px;
+  width: 300px;
+}
+textarea{
+  width: 300px;
+}
+.submitBtn{
+  width: 100px;
+  margin: 0 100px;
+  border-radius: 5px;
+}
+.message{
+  width: 45%;
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+}
+.wrapper{
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  margin-top: 100px;
+}
+footer{
+  width: 100%;
+  background: #444;
+  height: 80px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px;
+  clear: both;
+}
+@media screen and (max-width: 900px) {
+  html{
+    background: #333;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  header h3{
+    margin-bottom: 30px;
+  }
+  nav{
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  nav li{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: block;
+    width: 100px;
+  }
+  .dropMenu{
+    position: absolute;
+    left: -15px;
+    background: #444;
+  }
+  .mainWrapper{
+    height: 600px;
+  }
+  .formWrapper{
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .message{
+    width: 100%;
+    text-align: center;
+  }
+  .wrapper{
+    height: 300px;
+  }
+}
+@media screen and (max-width: 300px) {
+  input{
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+  }
+}

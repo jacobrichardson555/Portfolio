@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample site</title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+    }
+    header{
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      text-align: center;
+      background: #ccc;
+      z-index: 2;
+    }
+    nav{
+      width: 100%;
+    }
+    nav li{
+      border-bottom: 1px solid black;
+      background: linear-gradient(#fff, #ccc);
+      margin-bottom: 1px;
+      padding: 10px;
+      color: #000;
+    }
+    .ad{
+      position: relative;
+      overflow: hidden;
+      margin: 50px auto;
+      text-align: center;
+      width: 90%;
+      height: 200px;
+      background: url(ad-image.jpg);
+      animation: border-blink 0.5s linear infinite;
+    }
+    .ad a{
+      color: #000;
+    }
+    @keyframes border-blink{
+      from {border: 2px solid limegreen;}
+      to {border: 2px solid cyan;}
+    }
+    .ad h3{
+      margin: 20px 0 40px;
+      animation: blink 0.5s ease infinite;
+    }
+    @keyframes blink{
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0;}
+    }
+    .ad img{
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      animation: move-up 1.5s ease-in infinite;
+    }
+    @keyframes move-up{
+      0% {top: 120%; left: 35%; opacity: 0;}
+      30% {top: 60%; left: 35%; opacity: 1;}
+      40%, 80% {top: 60%; left: 35%; transform: scale(1.2);}
+      60%, 100% {top: 60%; left: 35%; transform: scale(1);}
+    }
+    .banner{
+      width: 100%;
+      height: 100px;
+      background: limegreen;
+      text-align: center;
+      font-size: 24pt;
+      color: #fff;
+      letter-spacing: 5px;
+      font-family: monospace;
+    }
+    .banner h1{
+      position: absolute;
+      left: 50%;
+    }
+    .img-wrapper{
+      text-align: center;
+      display: block;
+      position: absolute;
+      top: 120px;
+      left: 35%;
+      margin: auto;
+      width: 50%;
+      height: 300px;;
+      overflow: hidden;
+    }
+    .mySlides span{
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin: 0 5px;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    .buttons{
+      position: absolute;
+      top: 93%;
+      width: 100%;
+    }
+    .active{
+      background: #fff;
+    }
+    .one{
+      background: url("image1.jpg") no-repeat top center;
+      background-size: cover;
+    }
+    .two{
+      background: url("image2.jpg") no-repeat top center;
+      background-size: cover;
+    }
+    .three{
+      background: url("image3.jpg") no-repeat top center;
+      background-size: cover;
+    }
+    .four{
+      background: url("image4.jpg") no-repeat top center;
+      background-size: cover;
+    }
+    .mySlides{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      animation: slide 0.4s ease-in;
+    }
+      @keyframes slide{
+      from{left: 100%; opacity: 0;}
+      to{ left: 0; opacity: 1;}
+    }
+    .wrapper{
+      width: 70%;
+      position: absolute;
+      top: 500px;
+      left: 280px;
+      text-align: center;
+    }
+    .wrapper img{
+      float: left;
+      margin: 0 80px 80px 0;
+    }
+    .column-wrapper{
+      width: 70%;
+      position: absolute;
+      top: 1000px;
+      left: 280px;
+      text-align: center;
+    }
+    .column{
+      display: inline-block;
+      width: 33%;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 50px 0;
+    }
+    .column img{
+      margin: 40px 0;
+    }
+    .column p{
+      margin: 30px 20px;
+    }
+    .column span{
+      color: #777;
+    }
+    footer{
+      width: 70%;
+      height: 200px;;
+      position: absolute;
+      top: 1500px;
+      left: 280px;
+      text-align: center;
+      background: #ccc;
+      margin: 50px 0;
+    }
+    .foot{
+      display: inline-block;
+      width: 33%;
+      height: 100%;
+      position: absolute;
+    }
+    .fLeft{
+      top: 0;
+      left: 0;
+    }
+    .foot h3{
+      margin: 20px 0 30px;
+    }
+    .fCenter{
+      top: 0;
+      left: 33.5%;
+    }
+    .fCenter img{
+      margin: 10px;
+    }
+    .fRight{
+      top: 0;
+      left: 67%;
+    }
+    .fLeft a{
+      display: block;
+      margin: 15px;
+    }
+    @media screen and (max-width: 1150px){
+      .column{
+        width: 200px;
+        position: relative;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>Products</li></a>
+          <a href="#"><li>About</li></a>
+        <a href="#"><li>Contact</li></a>
+        </ul>
+      </nav>
+      <div class="ad">
+        <h3>NEED A SITE?</h3>
+        <p><a href="jacobrichardsonsportfolio.com">jacobrichardsonsportfolio.com</a></p><br>
+        <img src="hand.png" alt="pointer" width='50' />
+      </div>
+    </header>
+    <div class="banner">
+      <h1>WELCOME</h1>
+    </div>
+    <div class="img-wrapper">
+      <div class="mySlides one">
+        <div class="buttons">
+          <span class='active knob' onclick="change(1)"></span>
+          <span onclick="change(2)"></span>
+          <span onclick="change(3)"></span>
+          <span onclick="change(4)"></span>
+        </div>
+      </div>
+      <div class="mySlides two">
+        <div class="buttons">
+          <span onclick="change(1)"></span>
+          <span class='active' onclick="change(2)"></span>
+          <span onclick="change(3)"></span>
+          <span onclick="change(4)"></span>
+        </div>
+      </div>
+      <div class="mySlides three">
+        <div class="buttons">
+          <span onclick="change(1)"></span>
+          <span onclick="change(2)"></span>
+          <span class='active' onclick="change(3)"></span>
+          <span onclick="change(4)"></span>
+        </div>
+      </div>
+      <div class="mySlides four">
+        <div class="buttons">
+          <span onclick="change(1)"></span>
+          <span onclick="change(2)"></span>
+          <span onclick="change(3)"></span>
+          <span class='active' onclick="change(4)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <img src="pikachu.gif" alt="pikachu" width='250'/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat. Sed vehicula imperdiet metus, ut varius massa efficitur at. Curabitur nibh lectus, bibendum ultrices pellentesque quis, pellentesque sed sem. Donec et quam volutpat, auctor ipsum ut, ullamcorper nisl. Praesent euismod nisi eget lectus eleifend, sit amet interdum orci commodo. Mauris a purus nisl. Maecenas at pharetra lectus. Aenean magna purus, luctus et velit ac, vestibulum aliquet augue. Nulla interdum ante dapibus vehicula vestibulum. Morbi maximus, eros ut consectetur tristique, libero purus euismod lacus, ac pharetra nulla urna at felis. Sed fringilla tortor arcu, sed congue magna mattis ut. Vestibulum eget libero a eros lacinia faucibus sit amet et elit. Sed ac justo urna.
+
+Curabitur commodo condimentum elit, quis pharetra erat. Proin ullamcorper dolor tellus, ac dapibus lectus porta a. Donec neque sapien, ultricies et venenatis vitae, euismod ut sem. Quisque volutpat lobortis ipsum, sed consectetur nisi finibus nec. Cras nec lacinia ante, a condimentum lectus. Etiam porttitor dui posuere metus suscipit tempus. Maecenas dolor ex, iaculis vitae convallis sed, feugiat vel sapien. Sed egestas, ipsum eu mattis faucibus, sem nisi laoreet purus, nec fermentum mi est a neque. Cras sollicitudin et ipsum at vehicula. Cras pellentesque augue vitae nibh molestie efficitur. Aenean vel ullamcorper justo. Aenean hendrerit libero id ornare vehicula. Vivamus sodales nulla ullamcorper luctus tincidunt. Donec feugiat augue quis augue bibendum, varius ultricies metus auctor. Fusce posuere viverra luctus. Suspendisse feugiat eleifend massa, vitae mattis velit. Curabitur metus nulla, ornare eu turpis pellentesque, facilisis pellentesque nisl.
+
+Pellentesque libero nisl, congue quis condimentum vel, placerat ut erat. Sed viverra luctus ligula, id laoreet lacus condimentum ullamcorper. Etiam tincidunt neque sit amet lacus hendrerit, iaculis rhoncus elit dignissim. Nam ut est malesuada arcu consequat faucibus vitae vitae turpis. Maecenas pretium, mauris sit amet pharetra aliquam, est mi elementum tortor, vel euismod dolor felis ut turpis. Sed viverra sem vel velit dignissim cursus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Fusce viverra lacus eu ante ornare tempus. Etiam nec nulla sed sem ornare egestas at ac tellus. Aenean nec urna dolor. Fusce porta, metus non ultricies blandit, eros arcu sagittis felis, ac cursus nisi lacus nec dui.</p>
+    </div>
+    <div class="column-wrapper">
+      <div class="column left">
+        <img src="tentomon.gif" alt="tentomon" width='100'><hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat. Sed vehicula imperdiet metus, ut varius massa efficitur at. Curabitur nibh lectus, bibendum ultrices pellentesque quis, pellentesque sed sem...<a href="#"><span>MORE>></span></a></p>
+      </div>
+      <div class="column center">
+        <img src="veemon.gif" alt="tentomon" width='100'><hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat. Sed vehicula imperdiet metus, ut varius massa efficitur at. Curabitur nibh lectus, bibendum ultrices pellentesque quis, pellentesque sed sem...<a href="#"><span>MORE>></span></a></p>
+      </div>
+      <div class="column right">
+        <img src="palmon.gif" alt="tentomon" width='100'><hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem purus, commodo consequat posuere eu, maximus vitae quam. In quis mi a ligula commodo volutpat. Sed vehicula imperdiet metus, ut varius massa efficitur at. Curabitur nibh lectus, bibendum ultrices pellentesque quis, pellentesque sed sem...<a href="#"><span>MORE>></span></a></p>
+      </div>
+    </div>
+    <footer>
+      <div class="foot fLeft">
+        <h3>Links</h3>
+        <a href="#">Blogs</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </div>
+      <div class="foot fCenter">
+        <a href="#"><img src="link.gif" alt="link" width='150'></a>
+      </div>
+      <div class="foot fRight">
+        <h3>Connect</h3>
+        <a href="#"><img src="fb-logo.png" alt="fb logo" width='50' class='logo'></a>
+        <a href="#"><img src="twitter-logo.png" alt="twitter logo" width='50' class='logo'></a>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 5000);
+    }
+
+    function change(a){
+      var x = document.getElementsByClassName("mySlides");
+      var i;
+
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex = a - 1;
+
+      x[myIndex].style.display = "block";
+    }
+    $(".logo").hover(function(){
+      $(this).attr({
+        width: "51",
+        height: "51"});
+    }, function(){
+      $(this).attr({
+        width: "50",
+        height: "50"});
+    })
+    </script>
+  </body>
+</html>
